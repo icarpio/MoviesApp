@@ -9,7 +9,6 @@ export class AppComponent {
   title = 'MoviesApp';
 
   constructor(public _mvService:MoviesService){
-    this.getCartelera();
   }
   getMostPopularity(){
     this._mvService.getMostPopularity().subscribe(data=>console.log(data));
@@ -17,7 +16,5 @@ export class AppComponent {
   searchMovie(text:string){
     this._mvService.searchMovie(text).subscribe(data=>console.log(data));
   }
-  getCartelera(){
-    this._mvService.getCartelera().subscribe(data=>console.log(data));
-  }
+ 
 }

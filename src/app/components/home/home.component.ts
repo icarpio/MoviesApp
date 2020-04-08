@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import {MoviesService} from '../../services/movies.service';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -7,7 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  constructor( public _ms:MoviesService) {
+    this._ms.getCartelera().subscribe(data => {
+       console.log(data);
+    })
+   }
 
   ngOnInit() {
     
