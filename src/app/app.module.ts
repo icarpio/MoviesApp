@@ -11,6 +11,7 @@ import {AppRoutingModule} from './app-routing.module';
 import { NoimagePipe } from './pipes/noimage.pipe';
 import { GalleryComponent } from './components/home/gallery.component';
 import { FormsModule } from '@angular/forms';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { FormsModule } from '@angular/forms';
     MoviesComponent,
     NoimagePipe,
     GalleryComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,

@@ -10,15 +10,18 @@
         </div>
        
     </div>
-    <div class="row">
+    <div class="row animated fadeIn fast">
         <div class="card-columns">
-
             <div class="card" *ngFor="let mo of _msService.movies">
               <img class="card-img-top img-fluid" [src]="mo|noimage" [alt]="mo.original_title">
               <div class="card-block">
                 <h4 class="card-title">{{ mo.original_title }}</h4>
                 <p class="card-text text-justify">{{ mo.overview | slice:0:250}}...</p>
-                <button type="button" class="btn btn-primary btn-block">Ver mas ...</button>
+                <button type="button"
+                [routerLink]="['/movie', mo.id, 'search', search]"
+                class="btn btn-primary btn-block">
+          Ver más...
+        </button>
               </div>
             </div>
       

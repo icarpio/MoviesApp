@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { MoviesService } from '../../services/movies.service';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-movie-detail',
@@ -7,7 +9,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MovieDetailComponent implements OnInit {
 
-  constructor() { }
+  movie: any;
+  comeBack:string = "";
+  search:string ="";
+  
+  constructor(public _msService: MoviesService, public router: ActivatedRoute) {
+    this.router.params.subscribe(parameters => {
+      this.comeBack = parameters['pag'];
+      if(parameters['search']){
+        this.search = parameters['search'];
+      }
+      this._msService.getMovie(parameters['id']).subscribe(movie => {
+        this.movie = movie
+        
+      })
+    })
+  }
 
   ngOnInit() {
   }

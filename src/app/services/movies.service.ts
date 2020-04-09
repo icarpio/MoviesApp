@@ -43,4 +43,9 @@ export class MoviesService {
     let url = `${ this.urlMoviedDB }/discover/movie?primary_release_year=2019&sort_by=vote_average.desc&api_key=${this.apiKey}&language=es&callback=JSONP_CALLBACK`;
     return this.jsonp.get(url).pipe(map((response: any) => response.json().results));
   }
+
+  getMovie( id:string ){
+    let url = `${ this.urlMoviedDB }/movie/${id}?api_key=${this.apiKey}&language=es&callback=JSONP_CALLBACK`;
+    return this.jsonp.get( url ).pipe(map((response: any) => response.json()));
+  }
 }

@@ -6,13 +6,12 @@ import {MovieDetailComponent} from './components/movie-detail/movie-detail.compo
 import { NgModule } from '@angular/core';
 
 const routes:Routes = [
-  {path:'home',component:HomeComponent},
-  {path:'movies',component:MoviesComponent},
-  {path:'search',component:SearchComponent},
-  {path:'search/:text',component:SearchComponent},
-  {path:'',pathMatch:'full',redirectTo:'home'},
-  {path:'**',pathMatch:'full',redirectTo:'home'}
-  
+  { path: 'home', component: HomeComponent },
+  { path: 'search', component: SearchComponent },
+  { path: 'search/:texto', component: SearchComponent },
+  { path: 'movie/:id/:pag', component: MovieDetailComponent },
+  { path: 'movie/:id/:pag/:text', component: MovieDetailComponent },
+  { path: '**', pathMatch: 'full', redirectTo: 'home' }
 ]
 
 @NgModule({
