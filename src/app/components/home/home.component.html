@@ -1,48 +1,6 @@
-<div class="jumbotron jumbotron-fluid">
-    <div class="container">
-        <h1 class="display-4">MoviesApp</h1>
-        <p class="lead">Learning Angular</p>
-    </div>
-</div>
 
 <div class="container">
-    <div class="row" *ngIf="cartelera">
-        <div class="col-sm-6">
-            <div class="row">
-                <div class="col-md-12 div-pic-1"
-                    [ngStyle]="{ 'background-image': 'url('+ (this.cartelera.results[0] | noimage) +')'}">
-
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-sm-6 div-pic-2"
-                    [ngStyle]="{ 'background-image': 'url('+ (this.cartelera.results[1] | noimage) +')'}">
-
-                </div>
-                <div class="col-sm-6 div-pic-2"
-                    [ngStyle]="{ 'background-image': 'url('+ (this.cartelera.results[2] | noimage) +')'}">
-
-                </div>
-            </div>
-        </div>
-        <div class="col-sm-6">
-            <div class="row">
-                <div class="col-sm-6 div-pic-2"
-                    [ngStyle]="{ 'background-image': 'url('+ (this.cartelera.results[4] | noimage) +')'}">
-
-                </div>
-                <div class="col-sm-6 div-pic-2"
-                    [ngStyle]="{ 'background-image': 'url('+ (this.cartelera.results[5] | noimage) +')'}">
-
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-12 div-pic-1"
-                    [ngStyle]="{ 'background-image': 'url('+ (this.cartelera.results[6] | noimage) +')'}">
-
-                </div>
-            </div>
-        </div>
-    </div>
+    <app-gallery [movies]="cartelera" title="Peliculas en Cartelera"></app-gallery>
+    <app-gallery [movies]="moviesPop" title="Peliculas mas populares"></app-gallery>
+    <app-gallery [movies]="movies019" title="Peliculas del 2019"></app-gallery>
 </div>

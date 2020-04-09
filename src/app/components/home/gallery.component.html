@@ -1,0 +1,27 @@
+<h1>{{title}}</h1>
+<div class="row" *ngIf="movies">
+    <div class="col-sm-6">
+        <div class="row animated fadeIn fast">
+            <div class="col-md-12 div-pic-1" [ngStyle]="{ 'background-image': 'url('+ (this.movies[0] | noimage) +')'}">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6 div-pic-2" [ngStyle]="{ 'background-image': 'url('+ (this.movies[1] | noimage) +')'}">
+            </div>
+            <div class="col-sm-6 div-pic-2" [ngStyle]="{ 'background-image': 'url('+ (this.movies[2] | noimage) +')'}">
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-6">
+        <div class="row">
+            <div class="col-sm-6 div-pic-2" [ngStyle]="{ 'background-image': 'url('+ (this.movies[4] | noimage) +')'}">
+            </div>
+            <div class="col-sm-6 div-pic-2" [ngStyle]="{ 'background-image': 'url('+ (this.movies[5] | noimage) +')'}">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 div-pic-1" [ngStyle]="{ 'background-image': 'url('+ (this.movies[6] | noimage) +')'}">
+            </div>
+        </div>
+    </div>
+</div>
