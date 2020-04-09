@@ -9,6 +9,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { MoviesComponent } from './components/movies/movies.component';
 import {RouterModule} from '@angular/router';
 import {AppRoutingModule} from './app-routing.module';
+import { NoimagePipe } from './pipes/noimage.pipe';
 @NgModule({
   declarations: [
     AppComponent,
@@ -16,7 +17,8 @@ import {AppRoutingModule} from './app-routing.module';
     SearchComponent,
     MovieDetailComponent,
     NavbarComponent,
-    MoviesComponent
+    MoviesComponent,
+    NoimagePipe
   ],
   imports: [
     BrowserModule,

@@ -6,10 +6,14 @@ import {MoviesService} from '../../services/movies.service';
   styles: []
 })
 export class HomeComponent implements OnInit {
+  
+
+  cartelera:any;
 
   constructor( public _ms:MoviesService) {
     this._ms.getCartelera().subscribe(data => {
-       console.log(data);
+       this.cartelera = data;
+       console.log(this.cartelera.results)
     })
    }
 
